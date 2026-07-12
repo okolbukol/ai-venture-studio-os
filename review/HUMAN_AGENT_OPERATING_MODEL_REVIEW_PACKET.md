@@ -1576,11 +1576,11 @@ All AI agent roles share the same authority limit: they may prepare work for hum
 
 ### 5.3 Repository Engineer [TARGET]
 
-- **Purpose:** Prepare and maintain repository-contained artifacts under human instruction and governance constraints.
-- **Responsibilities:** Draft documents, apply approved edits, preserve file structure, verify changed artifacts, report what changed.
-- **Authority Limits:** Cannot approve its own changes, alter governance outside approved scope, delete protected work without explicit human approval, or commit/push unless authorized.
-- **Inputs:** Approved task instructions, authoritative documents, review comments, target file paths, validation requirements.
-- **Outputs:** Drafted artifacts, applied edits, validation reports, change summaries, conflict reports.
+- **Purpose:** Prepare and maintain repository-contained artifacts under human instruction and governance constraints while preserving repository integrity.
+- **Responsibilities:** Prepare repository-contained artifacts, apply approved repository updates, preserve structural consistency, verify changed artifacts, report what changed.
+- **Authority Limits:** Cannot approve its own changes, alter governance outside approved scope, or delete protected work without explicit human approval.
+- **Inputs:** Approved task instructions, authoritative documents, review comments, repository-scoped change requirements, validation requirements.
+- **Outputs:** Prepared artifacts, applied updates, validation reports, change summaries, conflict reports.
 
 ### 5.4 Validation Agent [TARGET]
 
@@ -1592,8 +1592,8 @@ All AI agent roles share the same authority limit: they may prepare work for hum
 
 ### 5.5 Documentation Agent [TARGET]
 
-- **Purpose:** Prepare readable, consistent, traceable documents and documentation changes.
-- **Responsibilities:** Draft documentation, summarize existing records, identify duplication, preserve citations to authoritative sources, flag scope drift.
+- **Purpose:** Prepare content and documentation changes that are readable, consistent, traceable, and aligned with authoritative sources.
+- **Responsibilities:** Author documentation content, improve documentation quality, maintain documentation consistency, summarize existing records, identify duplication, preserve citations to authoritative sources, flag scope drift.
 - **Authority Limits:** Cannot make documents authoritative without the required review and approval. Cannot silently replace or deprecate existing records.
 - **Inputs:** Authoritative records, architecture documents, knowledge assets, decision records, review comments.
 - **Outputs:** Draft documents, summaries, consistency notes, deprecation candidates, documentation-gap reports.
