@@ -104,8 +104,6 @@ A control gate is an **architectural control point** at which a defined transiti
 
 Each gate defines its purpose, what it governs, the entry conditions that must hold (evidence and authority), the outcomes it may produce, and the governance records it requires. Detailed movement through gates — the "in motion" mechanics of routing and sequencing — is the concern of implementation, not this document.
 
-The transition from Build to Growth is governed through the existing architectural control structure by the Build-Readiness Gate together with the recurring Portfolio-Review Gate.
-
 ### 5.1 Admission Gate [TARGET]
 
 - **Governs:** Whether an idea or opportunity is admitted into studio-level assessment.
