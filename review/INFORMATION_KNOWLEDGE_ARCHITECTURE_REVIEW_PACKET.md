@@ -1029,7 +1029,7 @@ Before any existing document, record, artifact, or knowledge source is supersede
 
 ### 3.5 Information Lifecycle
 
-Information objects have lifecycles. A lifecycle describes architectural state, not workflow sequence.
+Information objects have lifecycles. A lifecycle describes architectural state, not workflow sequence, and object-specific lifecycle states specialize these generic architectural lifecycle states.
 
 At this level, an information object may be:
 
@@ -1051,6 +1051,8 @@ Authoritative records must preserve enough context to support future judgment. A
 
 Information must distinguish fact, assumption, hypothesis, and recommendation. Unaudited current-state claims remain **[UNKNOWN]**. Intended structure remains **[TARGET]** until reconciled through audit.
 
+Recommendations are preserved inside Decision Records and evidence-classification outputs; they are not authoritative standalone objects.
+
 This rule applies to information objects as much as to prose. An unverified record is not made true by being recorded.
 
 ## 4. Information Objects
@@ -1062,7 +1064,7 @@ The following information objects are the durable studio-level objects VSOS must
 - **Purpose:** Capture a potential venture, problem, market signal, or strategic possibility before it is treated as validated.
 - **Owner:** VSOS owns studio-level idea records. Product-internal idea details remain outside VSOS unless they are deposited through a studio-level interface.
 - **Lifecycle:** Proposed -> Framed -> Advanced, Parked, Superseded, or Archived.
-- **Relationships:** May produce assumptions, hypotheses, problem statements, opportunity records, or decision records. May draw on knowledge assets or venture thesis records.
+- **Relationships:** May produce assumptions, hypotheses, problem statements, opportunity records, or decision records. May draw on knowledge assets or Venture Thesis Records.
 
 ### 4.2 Problem Statement [TARGET]
 
@@ -1076,12 +1078,12 @@ The following information objects are the durable studio-level objects VSOS must
 - **Purpose:** Represent a qualified studio-level opportunity that may justify venture concept definition or further validation.
 - **Owner:** VSOS owns opportunity records at studio level.
 - **Lifecycle:** Proposed -> Qualified -> Advanced, Rejected, Superseded, or Archived.
-- **Relationships:** Depends on problem statements, evidence, assumptions, hypotheses, and venture thesis records. May lead to venture concept records or decision records.
+- **Relationships:** Depends on problem statements, evidence, assumptions, hypotheses, and Venture Thesis Records. May lead to venture concept records or decision records.
 
 ### 4.4 Venture Concept Record [TARGET]
 
 - **Purpose:** Define a potential venture in terms of customer, problem, proposed value, key assumptions, and validation questions.
-- **Owner:** VSOS owns venture concept records until and unless product-internal implementation begins outside the VSOS boundary.
+- **Owner:** VSOS owns Venture Concept Records for traceability and knowledge compounding. Only product-internal implementation moves outside the VSOS boundary.
 - **Lifecycle:** Draft -> Active -> Validated, Invalidated, Superseded, or Archived.
 - **Relationships:** Relates to ideas, problem statements, opportunity records, hypotheses, experiments, evidence, validation assessments, and portfolio records.
 
@@ -1224,6 +1226,13 @@ The following information objects are the durable studio-level objects VSOS must
 - **Owner:** The authoritative owner remains the source object. VSOS owns copy or derivative labels for studio-level information.
 - **Lifecycle:** Created -> Active -> Refreshed, Superseded, Deprecated, or Archived.
 - **Relationships:** Must cite its source. May expose drift, duplication, or source-of-truth defects if it diverges from the authoritative record.
+
+### 4.25 Venture Thesis Record [TARGET]
+
+- **Purpose:** Preserve the studio-level thesis that guides what kinds of ventures the studio should pursue and why.
+- **Owner:** VSOS owns Venture Thesis Records as studio-level strategic information.
+- **Lifecycle:** Draft -> Active -> Revised, Superseded, or Archived.
+- **Relationships:** Informs ideas, opportunity records, venture concept records, validation assessments, portfolio records, decision records, risk records, and knowledge assets.
 
 ## 5. Knowledge Flow
 
