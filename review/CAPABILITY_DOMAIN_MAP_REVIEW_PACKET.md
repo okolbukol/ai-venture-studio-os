@@ -713,9 +713,9 @@ All capabilities below are **[TARGET]**.
 ### 6.4 Source-of-Truth Stewardship [TARGET]
 
 - **Name:** Source-of-Truth Stewardship
-- **Purpose:** Ensure every studio-level fact has exactly one authoritative home, with copies and derivatives clearly identified.
+- **Purpose:** Ensure every fact within an already-determined side or domain has exactly one authoritative home, with copies and derivatives clearly identified.
 - **Inputs:** Studio-level records, product-level references, architecture documents, duplicated facts, conflicting claims.
-- **Outputs:** Ownership determinations, authoritative records, copy labels, conflict records.
+- **Outputs:** Authoritative-home determinations, authoritative records, copy labels, conflict records.
 - **Dependencies:** Boundary and Ownership Control, Documentation Stewardship, Change Control Stewardship.
 
 ### 6.5 Documentation Stewardship [TARGET]
@@ -787,9 +787,9 @@ All capabilities below are **[TARGET]**.
 ### 7.5 Boundary and Ownership Control [TARGET]
 
 - **Name:** Boundary and Ownership Control
-- **Purpose:** Maintain the distinction between what belongs inside VSOS, what belongs outside it, and which source owns each fact.
+- **Purpose:** Decide whether a concern belongs inside or outside VSOS, and whether it belongs at studio level or product level.
 - **Inputs:** System boundary definitions, ownership questions, conflicting records, studio-level facts, product-level references.
-- **Outputs:** Boundary decisions, ownership assignments, duplication defects, unresolved boundary questions.
+- **Outputs:** Boundary decisions, studio-level or product-level ownership assignments, duplication defects, unresolved boundary questions.
 - **Dependencies:** Source-of-Truth Stewardship, Architecture Consistency, Change Control Stewardship.
 
 ### 7.6 Architecture Consistency [TARGET]
@@ -819,6 +819,8 @@ All capabilities below are **[TARGET]**.
 ## 8. Capability Relationships
 
 Capability relationships describe structural dependency only. They do not define execution order, operating procedure, responsible party, or implementation.
+
+The per-capability **Dependencies** fields are authoritative. This section is a non-authoritative narrative summary intended to aid reading. If this section conflicts with a capability's **Dependencies** field, the capability definition wins.
 
 The core capability structure is:
 
