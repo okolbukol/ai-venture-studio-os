@@ -54,7 +54,7 @@ These principles constrain every interface defined below. Each traces to the aut
 
 ## 4. Interface Categories [TARGET]
 
-The following are durable **interface categories** — the kinds of governed seam the studio requires. They are reconciled against the authoritative architecture: each carries only defined information objects, preserves single ownership, and applies the relevant control. Every interface names an explicit source and destination; where an exchange is bidirectional, each direction is a distinct crossing with its own owner and control.
+The following are durable **interface categories** — the kinds of governed seam the studio requires. They are reconciled against the authoritative architecture: each carries only defined information objects, preserves single ownership, and applies the relevant control. Every interface names an explicit source and destination; bidirectional exchanges may describe inbound and outbound information separately, and the stated studio-side ownership and control rules may apply symmetrically to both directions unless otherwise specified.
 
 ### 4.1 Human ↔ VSOS [TARGET]
 
