@@ -3,8 +3,8 @@
 **Status:** Draft
 **Version:** 0.1.0
 **Type:** Standard — foundational
-**Owner:** Architecture Authority (documentation governance)
-**Authority:** Subordinate to the Constitution; consistent with the Core Architecture. Binds all VSOS documents.
+**Owner:** Architecture Steward [TARGET — pending governance assignment]
+**Authority:** Architecture Authority [TARGET — pending governance assignment]
 **Last Updated:** [UNKNOWN — set on ratification]
 **Related Documents:** `CONSTITUTION.md`; the seven Core Architecture documents in `docs/architecture/`.
 
@@ -145,7 +145,7 @@ Rules of use:
 
 - Every approved change to a document is recorded: what changed, the resulting version, the approving Authority, and the date.
 - Changes follow Audit → Design → Approval → Implementation (Constitution §13); silent edits to governed documents are prohibited.
-- Prior authoritative versions are superseded, deprecated, or archived per §6 — not erased — so decision memory survives (Constitution §9; `INFORMATION_KNOWLEDGE_ARCHITECTURE.md` §6.5).
+- Prior authoritative versions are Deprecated or Archived according to §6 — not erased — and supersession relationships are preserved according to `INFORMATION_KNOWLEDGE_ARCHITECTURE.md` §6.5, so decision memory survives (Constitution §9).
 - Change history is preserved as the appropriate governance record (Change Record, Decision Record) defined in `INFORMATION_KNOWLEDGE_ARCHITECTURE.md`; this standard requires that history exist, not where it is technically stored.
 
 ## 14. Scope Boundaries
@@ -178,7 +178,7 @@ These remain **[UNKNOWN]** until established through the change-control process.
 
 - **No conflict with architecture.** This standard references the Constitution and the seven architecture documents by section and redefines none of them; where a fact is architectural, it points to the owning document.
 - **No duplicated governance.** Authority, change control, source-of-truth, and truth-labeling are referenced from their authoritative homes (Constitution §4, §8, §10, §13; `DECISION_CONTROL_ARCHITECTURE.md`; `INFORMATION_KNOWLEDGE_ARCHITECTURE.md`), not restated as new governance.
-- **No implementation leakage.** No tool, vendor, format, storage mechanism, repository layout, or workflow is defined; §9, §13, and §14 explicitly push those below the standard.
+- **No implementation leakage.** No tool, vendor, storage mechanism, repository layout, or workflow is defined; §9, §13, and §14 explicitly push those below the standard.
 - **Suitable for every future VSOS document.** §2 and §3 cover all document classes, and §4–§13 apply uniformly across them, so the standard governs architecture, standards, ADRs, playbooks, agent specifications, and governance documents alike.
 
 *Draft v0.1. A Standards-layer document governing how VSOS documents are written. Subordinate to the Constitution and consistent with the Core Architecture. Not self-ratifying; amendable only through change control.*
