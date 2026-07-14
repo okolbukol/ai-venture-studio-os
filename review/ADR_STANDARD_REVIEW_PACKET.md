@@ -2551,6 +2551,7 @@ Every ADR carries the metadata block required by `DOCUMENTATION_STANDARD.md` §4
 - **Status** — one of the ADR statuses in §8.
 - **Identifier** — the unique ADR identifier per §9.
 - **Type / Class** — ADR.
+- **Version** — maintained while the ADR document is Draft and set to `1.0.0` when the ADR reaches Accepted. After acceptance, the ADR remains at Version `1.0.0`; Version is no longer incremented, and any material change requires a new or superseding ADR according to §16.
 - **Owner** — the accountable role category (`HUMAN_AGENT_OPERATING_MODEL.md`); never a named individual.
 - **Authority** — the authority category (`DECISION_CONTROL_ARCHITECTURE.md` §4) whose approval governs the decision.
 - **Date decided** — the date the ADR reached Accepted; `[UNKNOWN]` until then.
