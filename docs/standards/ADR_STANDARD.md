@@ -31,7 +31,7 @@ It governs how ADRs are written and managed. It does not make the decisions, def
 
 ## 3. What Is an ADR
 
-An ADR is a record of one consequential decision. It captures, at minimum: the decision, its context, the alternatives considered, the rationale, the consequences, and the conditions under which it should be revisited (Constitution §8).
+An ADR is a record of one consequential decision. It captures, at minimum: the decision, its context, the evidence the decision rests on, the assumptions the decision rests on, the hypotheses the decision rests on, the alternatives considered, the rationale, the consequences, and the conditions under which it should be revisited (Constitution §8). Evidence, assumptions, and hypotheses must be classified according to Constitution §4.
 
 An ADR records a **single** decision. A record covering several unrelated decisions is split. An ADR is a decision record, not a design document, a specification, or a restatement of the architecture the decision operates within.
 
@@ -80,6 +80,7 @@ Every ADR carries the metadata block required by `DOCUMENTATION_STANDARD.md` §4
 - **Identifier** — the unique ADR identifier per §9.
 - **Type / Class** — ADR.
 - **Version** — maintained while the ADR document is Draft and set to `1.0.0` when the ADR reaches Accepted. After acceptance, the ADR remains at Version `1.0.0`; Version is no longer incremented, and any material change requires a new or superseding ADR according to §16.
+- **Last Updated** — the date of the most recent approved change to the ADR document. Before acceptance it may change as the draft is revised. When the ADR reaches Accepted and Version `1.0.0`, it becomes fixed together with the accepted ADR. It is distinct from Date decided.
 - **Owner** — the accountable role category (`HUMAN_AGENT_OPERATING_MODEL.md`); never a named individual.
 - **Authority** — the authority category (`DECISION_CONTROL_ARCHITECTURE.md` §4) whose approval governs the decision.
 - **Date decided** — the date the ADR reached Accepted; `[UNKNOWN]` until then.
@@ -88,7 +89,19 @@ Every ADR carries the metadata block required by `DOCUMENTATION_STANDARD.md` §4
 
 ## 8. ADR Status Model
 
-An ADR carries exactly one status: **Proposed**, **Under review**, **Accepted**, **Rejected**, **Superseded**, **Deprecated**, or **Archived**, as defined in §6. These specialize the general status values in `DOCUMENTATION_STANDARD.md` §6 for decision records. An ADR is never self-approving: Proposed is the default, and only the governing authority moves it to Accepted.
+An ADR carries exactly one status: **Proposed**, **Under review**, **Accepted**, **Rejected**, **Superseded**, **Deprecated**, or **Archived**, as defined in §6. ADR status is a specialized adjudication lifecycle. Documentation status governs the ADR as a document (`DOCUMENTATION_STANDARD.md` §6); Decision Record lifecycle governs the recorded decision (`INFORMATION_KNOWLEDGE_ARCHITECTURE.md` §4.10).
+
+| ADR Status | Document Status (`DOCUMENTATION_STANDARD.md` §6) | Decision Record Lifecycle (`INFORMATION_KNOWLEDGE_ARCHITECTURE.md` §4.10) |
+| --- | --- | --- |
+| Proposed | Draft | Proposed |
+| Under review | Draft | Proposed |
+| Accepted | Approved | Decided / Active |
+| Rejected | Archived | Proposed, closed without adoption |
+| Superseded | Deprecated | Superseded |
+| Deprecated | Deprecated | Active but no longer recommended / retained |
+| Archived | Archived | Archived |
+
+Ratified has no ADR equivalent. Revisited is handled by confirmation or by a new superseding ADR. An ADR is never self-approving: Proposed is the default, and only the governing authority moves it to Accepted.
 
 ## 9. ADR Numbering and Identifiers
 
@@ -142,7 +155,7 @@ An ADR does not define implementation. Implementation owns the changing realizat
 
 Recorded as known unknowns, not assumptions; pending audit or later standards work:
 
-- Which authority category is assigned to approve each class of ADR (pending the authority-assignment audit in `DECISION_CONTROL_ARCHITECTURE.md` §11).
+- Which authority category is assigned to approve each class of ADR (pending the authority-assignment audit in `DECISION_CONTROL_ARCHITECTURE.md` §9).
 - Whether any decisions already made in existing work should be retroactively captured as ADRs.
 - The concrete identifier format and any partitioning of ADR series (a convention to be fixed under `DOCUMENTATION_STANDARD.md` §10).
 - Whether non-architecture decision classes will need ADR-standard extensions.
